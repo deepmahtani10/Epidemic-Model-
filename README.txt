@@ -1,4 +1,4 @@
-For this experimental project I wanted to create an SIR model that coupled Gaussian Processes with Monte Carlo Random Sampling and SFML with multithreading. I gcc 15.2.0 to compile SFML from source here.
+For this experimental project I wanted to create an SIR model that coupled Gaussian Processes with Monte Carlo Random Sampling and SFML with multithreading. I used gcc 15.2.0 to compile SFML from source here.
 
 If you're new to SFML (like I was about 1 month ago) here's a youtube tutorial, SFML is a user-friendly library for 2D graphics, windowing, and input. It’s great for drawing shapes, text, and managing graphics in real-time simulations.
 You can get SFML for free here: https://www.sfml-dev.org/download/
@@ -193,4 +193,5 @@ The number of Susceptible now are:142.959315
 The number of Infected now are:2.445477
 
 The number of ODE_worker iterations are:30
+
 The number of ODE samples are:30
