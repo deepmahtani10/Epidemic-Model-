@@ -14,6 +14,9 @@ Some external libraries I used are CppGp, Eigen, LBFGS++ and boost which can all
 
 My multithreading idea goes like this:
 
+<img width="364" height="172" alt="image" src="https://github.com/user-attachments/assets/8a820b1d-ae81-4480-ad13-b7a6b75bff97" />
+
+
 +-----------------+          +------------------+
 |    Main Thread  | <--read--| Worker Threads   |
 | - SFML window   |          | - ODE solver     |
