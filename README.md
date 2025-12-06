@@ -16,17 +16,6 @@ My multithreading idea goes like this:
 
 <img width="364" height="172" alt="image" src="https://github.com/user-attachments/assets/8a820b1d-ae81-4480-ad13-b7a6b75bff97" />
 
-
-+-----------------+          +------------------+
-|    Main Thread  | <--read--| Worker Threads   |
-| - SFML window   |          | - ODE solver     |
-| - Event poll    |          | - GP sampling    |
-| - Draw scene    |          | - Monte Carlo    |
-+-----------------+          +------------------+
-           |                         |
-       update shared state variables (mutex/atomic)
-
-
 This approach was decided on because my epidemic model follows idea called the SI (Susceptible-Infected) version of the SIR model (Susceptible-Infected-Recovered model) which allows me to find the number of people Susceptible (not infected but can get infected) S(t), the number of Infected people I(t) and, the number of Recovered people R(t) using a system of 3 ODEs shown below:
 The reason I only use SI instead of SIR is because I am only concerned with the transmission and percolation of the virus in the epidemic's affected population.
 dS(t)/dt = nN - μ*S(t) - [β*Prob(Infected given contact with another person)*Prob(Susceptible given contact with another person)*I(t)]/N
